@@ -89,7 +89,7 @@ namespace AB.WebUI
             }
             else
             {
-                lblmsg.Text = "Informe o Id do Aluno...";
+                lblmsg.Text = "Informe o Id da Pessoa...";
             }
         }
 

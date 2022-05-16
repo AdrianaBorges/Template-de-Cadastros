@@ -16,7 +16,7 @@ namespace AB.BLL
         {
             try
             {
-                string sql = "SELECT Id, Nome, Codigo, CPF, Sexo, Status, DataNascimento FROM Pessoa WHERE Id = " + id;
+                string sql = "SELECT REPLICATE('0', 3 - LEN(id)) + RTrim(id) as Id, Nome, Codigo, CPF, Sexo, Status, DataNascimento FROM Pessoa WHERE Id = " + id;
                 DataTable tabela = new DataTable();
                 tabela = AcessoDB.GetDataTable(sql);
                 return GetPessoa(tabela);
@@ -244,7 +244,7 @@ namespace AB.BLL
 
         public DataTable ExibirTodos()
         {
-            string sql = "SELECT ID, Nome, Codigo, CPF, " +
+            string sql = "SELECT REPLICATE('0', 3 - LEN(id)) + RTrim(id) as ID, Nome, Codigo, CPF, " +
                          "CASE WHEN Sexo = 0 THEN 'Feminino' WHEN Sexo = 1 THEN 'Masculino' END as Sexo, " +
                          "CASE WHEN status = 0 THEN 'Ativo' WHEN status = 1 THEN 'Inativo' END as Status, " +
                          "dbo.FormataData(DataNascimento) as DataNascimento FROM Pessoa order by nome";
