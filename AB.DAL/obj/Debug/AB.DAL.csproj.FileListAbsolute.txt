@@ -1,0 +1,6 @@
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\bin\Debug\AB.DAL.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\bin\Debug\AB.DAL.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\obj\Debug\AB.DAL.csproj.CoreCompileInputs.cache
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\obj\Debug\AB.DAL.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\obj\Debug\AB.DAL.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\obj\Debug\AB.DAL.csproj.AssemblyReference.cache

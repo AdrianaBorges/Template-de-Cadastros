@@ -1,0 +1,6 @@
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Cadastro.Factory\bin\Debug\AB.Cadastro.Factory.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Cadastro.Factory\bin\Debug\AB.Cadastro.Factory.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Cadastro.Factory\obj\Debug\AB.Cadastro.Service.csproj.CoreCompileInputs.cache
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Cadastro.Factory\obj\Debug\AB.Cadastro.Factory.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Cadastro.Factory\obj\Debug\AB.Cadastro.Factory.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Cadastro.Factory\obj\Debug\AB.Cadastro.Service.csproj.AssemblyReference.cache

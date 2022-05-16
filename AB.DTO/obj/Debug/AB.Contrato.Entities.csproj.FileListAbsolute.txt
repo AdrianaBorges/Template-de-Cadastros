@@ -1,0 +1,6 @@
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Contrato.Entities\bin\Debug\AB.Contrato.Entities.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Contrato.Entities\bin\Debug\AB.Contrato.Entities.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Contrato.Entities\obj\Debug\AB.Contrato.Entities.csproj.CoreCompileInputs.cache
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Contrato.Entities\obj\Debug\AB.Contrato.Entities.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Contrato.Entities\obj\Debug\AB.Contrato.Entities.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.Contrato.Entities\obj\Debug\AB.Contrato.Entities.csproj.AssemblyReference.cache

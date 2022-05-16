@@ -1,0 +1,9 @@
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\bin\Debug\dbTest.dacpac
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\bin\Debug\dbTest.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\bin\Debug\dbTest.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\obj\Debug\Model.xml
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\obj\Debug\refactor.xml
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\obj\Debug\postdeploy.sql
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\obj\Debug\predeploy.sql
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\obj\Debug\dbTest.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DAL\dbTest\obj\Debug\dbTest.pdb

@@ -1,0 +1,6 @@
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DTO\bin\Debug\AB.DTO.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DTO\bin\Debug\AB.DTO.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DTO\obj\Debug\AB.DTO.csproj.CoreCompileInputs.cache
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DTO\obj\Debug\AB.DTO.dll
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DTO\obj\Debug\AB.DTO.pdb
+C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.DTO\obj\Debug\AB.DTO.csproj.AssemblyReference.cache
