@@ -19,6 +19,35 @@ namespace AB.WebUI
         {
             ListaPessoas();
 
+            HabilitaCampos(false);
+
+            
+        }
+        private bool DadosPreenchidos()
+        {
+            if (txtNome.Text == string.Empty) { return false; }
+            if (txtCpf.Text == string.Empty) { return false; }
+            if (dplSexo.Text == string.Empty) { return false; }
+            if (dplStatus.Text == string.Empty) { return false; }
+            if (txtDtNascimento.Text == string.Empty) { return false; }
+
+            return true;
+
+        }
+        private void HabilitaCampos(bool value)
+        {
+            //txtId.Enabled = value;
+            txtNome.Enabled = value;
+            txtCpf.Enabled = value;
+            lblIdade.Text = $"0";
+            dplSexo.Enabled = value;
+            dplStatus.Enabled = value;
+            txtDtNascimento.Enabled = value;
+
+            btnIncluir.Enabled = value;
+            btnAlterar.Enabled = value;
+            btnExcluir.Enabled = value;
+
         }
 
         private void ListaPessoas()
@@ -33,7 +62,6 @@ namespace AB.WebUI
                 lblmsg.Text = ex.Message;
             }
         }
-
 
         protected void txtCodigo_TextChanged(object sender, EventArgs e)
         {
@@ -81,6 +109,9 @@ namespace AB.WebUI
                     txtDtNascimento.Text = _pessoa.DataNascimento.ToShortDateString();
 
                     lblIdade.Text = Convert.ToString(CalculaIdade(Convert.ToDateTime(txtDtNascimento.Text)) + " Anos");
+                    
+                    HabilitaCampos(true);
+
                 }
                 catch (Exception ex)
                 {
@@ -95,12 +126,20 @@ namespace AB.WebUI
 
         protected void btnIncluir_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtNome.Text) || !string.IsNullOrWhiteSpace(txtCpf.Text) || !string.IsNullOrWhiteSpace(txtCodigo.Text))
+
+            if (!DadosPreenchidos())
             {
+                lblmsg.Text = "Informe os dados necessários para inclusão.";
+                
+            }
+            else
+            {
+                btnIncluir.Text = $"Gravar";
+
                 try
                 {
                     _pessoa.Codigo = GeraNovoCodigo(Convert.ToInt32(_pessoaBLL.GetProximoCodigo()));
-                    _pessoa.Status = (EnumStatusPessoa)dplStatus.SelectedIndex;  
+                    _pessoa.Status = (EnumStatusPessoa)dplStatus.SelectedIndex;
                     _pessoa.Nome = txtNome.Text;
                     _pessoa.CPF = txtCpf.Text;
                     _pessoa.Sexo = (EnumSexoPessoa)dplSexo.SelectedIndex;
@@ -113,21 +152,27 @@ namespace AB.WebUI
                     lblmsg.Text = ex.Message;
                 }
             }
-            else
-            {
-                lblmsg.Text = "Informe o nome e o cpf...";
-            }
         }
 
         private string GeraNovoCodigo(int id)
         {
-            //int _id = id++;
+            string _codigo = Convert.ToString(id);
+            var _data = DateTime.Now;
+            string _mes = Convert.ToString(_data.Month);
 
-            //string _len = "00" + _id + "." + da
+            while (_codigo.Length != 3)
+            {
+                _codigo = $"0" + _codigo;
+            }
 
-            return string.Empty;
+            while (_mes.Length != 2)
+            {
+                _mes = $"0" + _mes;
+            }
 
+            _codigo = _codigo + $"." + _mes + $"." + Convert.ToString(_data.Year);
 
+            return _codigo;
 
         }
 
@@ -146,6 +191,14 @@ namespace AB.WebUI
             dplSexo.SelectedIndex = 0;
             txtDtNascimento.Text = string.Empty;
             lblIdade.Text = $"0";
+        }
+
+        protected void btnNovo_Click(object sender, EventArgs e)
+        {
+            LimpaTelaDeCadastro();
+
+            HabilitaCampos(true);
+            
         }
     }
 }

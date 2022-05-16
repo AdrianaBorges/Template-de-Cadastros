@@ -123,7 +123,7 @@ namespace AB.BLL
 
         public string GetProximoCodigo()
         {
-            string sql = "SELECT Max(Id) as Id FROM Pessoa ";
+            string sql = "SELECT Max(Id) + 1 as Id FROM Pessoa ";
 
             try
             {

@@ -53,7 +53,8 @@
                                         runat="server" 
                                         Text="Localizar" 
                                         Width="79px" 
-                                        OnClick="btnLocalizar_Click" Height="30px" />
+                                        OnClick="btnLocalizar_Click" 
+                                        Height="25px" />
                         </td>                      
                 </tr>
 
@@ -149,10 +150,11 @@
                 <tr>
                     <td class="auto-style5" style="width: 114px">&nbsp;</td>
                     <td class="auto-style11">
-                        <asp:Button ID="btnIncluir" runat="server" Text="Incluir" Width="100px" OnClick="btnIncluir_Click" />
-                        <asp:Button ID="btnAlterar" runat="server" Text="Alterar" Width="100px" />
-                        <asp:Button ID="btnExcluir" runat="server" Text="Excluir" Width="100px" />
-                        <asp:Button ID="btnSair" runat="server" Text="Limpar" Width="100px" OnClick="btnSair_Click" />
+                        <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="90px" OnClick="btnNovo_Click" />
+                        <asp:Button ID="btnIncluir" runat="server" Text="Incluir" Width="90px" OnClick="btnIncluir_Click" />
+                        <asp:Button ID="btnAlterar" runat="server" Text="Alterar" Width="90px" />
+                        <asp:Button ID="btnExcluir" runat="server" Text="Excluir" Width="90px" />
+                        <asp:Button ID="btnSair" runat="server" Text="Limpar" Width="90px" OnClick="btnSair_Click" />
                     </td>
                 </tr>
                 <tr>
