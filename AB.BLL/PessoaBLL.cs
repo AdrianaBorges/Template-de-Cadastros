@@ -12,6 +12,8 @@ namespace AB.BLL
 {
     public class PessoaBLL : IPessoa<Pessoa>
     {
+        private PessoaDao _dao;
+
         public Pessoa GetPessoaId(int id)
         {
             try
@@ -161,39 +163,31 @@ namespace AB.BLL
                 throw ex;
             }
         }
-        public void Incluir(Pessoa oPessoa)
+        public void Incluir(Pessoa p)
         {
-            string sql = "";
             try
             {
-                string[] parametrosNomes = new string[7];
-                parametrosNomes[0] = "@Nome";
-                parametrosNomes[1] = "@Codigo";
-                parametrosNomes[2] = "@Cpf";
-                parametrosNomes[3] = "@Sexo";
-                parametrosNomes[4] = "@Status";
-                parametrosNomes[5] = "@DataNascimento";
+                _dao.OpenConnection();
 
-                string[] parametrosValores = new string[7];
-                parametrosValores[0] = oPessoa.Nome;
-                parametrosValores[1] = oPessoa.Codigo;
-                parametrosValores[2] = oPessoa.CPF;
-
-                int _sexo = Convert.ToInt32(oPessoa.Sexo);
-                int _satus = Convert.ToInt32(oPessoa.Status);
-
-                parametrosValores[3] = Convert.ToString(_sexo);
-                parametrosValores[4] = Convert.ToString(_satus);
-                parametrosValores[5] = Convert.ToString (oPessoa.DataNascimento);
-
-                sql = "INSERT INTO Pessoa(Nome,Codigo, Cpf, Sexo, Status, datanascimento) values (@Nome,@Codigo, @Cpf, @Sexo, @Status, @datanascimento)";
-                AcessoDB.CRUD(sql, parametrosNomes, parametrosValores);
-
-                AcessoDB.ExecuteNonQuery(sql);
+                _dao.Execute(new P_RegistraPessoa()
+                {
+                    Operacao = "INSERT",
+                    Nome = p.Nome ,
+                    Codigo = p.Codigo,
+                    CPF = p.CPF,
+                    Sexo = p.Sexo,
+                    Status = p.Status,
+                    DataNascimento = p.DataNascimento,
+                    
+                });
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(string.Format("Não foi possível cadastrar."));
+            }
+            finally
+            {
+                _dao.CloseConnection();
             }
         }
         public void Alterar(Pessoa oPessoa)

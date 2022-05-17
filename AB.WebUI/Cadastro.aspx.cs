@@ -73,9 +73,14 @@ namespace AB.WebUI
 
         }
 
-        protected void dplListaPessoa_SelectedIndexChanged(object sender, EventArgs e)
+        protected void dplStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dplStatus.Text = dplStatus.SelectedItem.Value;
+        }
 
+        protected void dplSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dplSexo.Text = dplSexo.SelectedItem.Value;
         }
 
         private int CalculaIdade(DateTime dtNascimento)
@@ -130,19 +135,21 @@ namespace AB.WebUI
             if (!DadosPreenchidos())
             {
                 lblmsg.Text = "Informe os dados necessários para inclusão.";
-                
             }
             else
             {
                 btnIncluir.Text = $"Gravar";
+                int _sexo = Convert.ToInt32(dplSexo.SelectedValue);
+                int _status = Convert.ToInt32(dplStatus.SelectedValue);
 
                 try
                 {
                     _pessoa.Codigo = GeraNovoCodigo(Convert.ToInt32(_pessoaBLL.GetProximoCodigo()));
-                    _pessoa.Status = (EnumStatusPessoa)dplStatus.SelectedIndex;
+                    _pessoa.Sexo = (EnumSexoPessoa)_sexo;
+                    _pessoa.Status = (EnumStatusPessoa)_status;
                     _pessoa.Nome = txtNome.Text;
                     _pessoa.CPF = txtCpf.Text;
-                    _pessoa.Sexo = (EnumSexoPessoa)dplSexo.SelectedIndex;
+                    //_pessoa.Sexo = dplSexo.SelectedValue;
                     _pessoa.DataNascimento = Convert.ToDateTime(txtDtNascimento.Text);
 
                     _pessoaBLL.Incluir(_pessoa);
@@ -170,7 +177,7 @@ namespace AB.WebUI
                 _mes = $"0" + _mes;
             }
 
-            _codigo = _codigo + $"." + _mes + $"." + Convert.ToString(_data.Year);
+            _codigo = _codigo + $"." + _mes + Convert.ToString(_data.Year);
 
             return _codigo;
 

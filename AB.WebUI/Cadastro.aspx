@@ -78,6 +78,7 @@
                         <td class="auto-style11">
                             <asp:DropDownList ID="dplStatus" 
                                 runat="server"
+                                OnSelectedIndexChanged ="dplSexo_SelectedIndexChanged"
                                 Height="25px"
                                 Width="93px">
                                 <asp:ListItem></asp:ListItem>
@@ -120,6 +121,7 @@
                     <td class="auto-style11">
                         <asp:DropDownList ID="dplSexo" 
                             runat="server"
+                            OnSelectedIndexChanged ="dplSexo_SelectedIndexChanged"
                             Height="25px"
                             Width="120px">
                             <asp:ListItem></asp:ListItem>
