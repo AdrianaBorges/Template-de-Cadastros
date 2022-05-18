@@ -141,7 +141,6 @@ C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\Newtonsoft.Json.dll
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\System.Web.Optimization.dll
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\WebGrease.dll
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\AB.DAL.dll
-C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\Data.Base.dll
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\AB.BLL.pdb
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\AB.DTO.pdb
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\System.Web.Optimization.xml
@@ -150,8 +149,6 @@ C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\Antlr3.Runtime.pdb
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\AB.DAL.pdb
-C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\Data.Base.pdb
-C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\Data.Base.xml
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\pt-br\System.Web.Optimization.resources.dll
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\pt-br\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\obj\Debug\AB.WebUI.csproj.AssemblyReference.cache
@@ -159,5 +156,3 @@ C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\obj\Debug\AB.WebUI.csproj
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\obj\Debug\AB.WebUI.csproj.CopyComplete
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\obj\Debug\AB.WebUI.dll
 C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\obj\Debug\AB.WebUI.pdb
-C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\nunit.framework.dll
-C:\Adriana.Borges\Borges.Projetos\AB.Cadastro\AB.WebUI\bin\nunit.framework.xml

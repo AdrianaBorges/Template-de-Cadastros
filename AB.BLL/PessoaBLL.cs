@@ -163,32 +163,64 @@ namespace AB.BLL
                 throw ex;
             }
         }
-        public void Incluir(Pessoa p)
+        public void Incluir(Pessoa oPessoa)
         {
+            string sql = "";
             try
             {
-                _dao.OpenConnection();
+                string[] parametrosNomes = new string[6];
+                parametrosNomes[0] = "@Nome";
+                parametrosNomes[1] = "@Codigo";
+                parametrosNomes[2] = "@Cpf";
+                parametrosNomes[3] = "@Sexo";
+                parametrosNomes[4] = "@Status";
+                parametrosNomes[5] = "@DataNascimento";
 
-                _dao.Execute(new P_RegistraPessoa()
-                {
-                    Operacao = "INSERT",
-                    Nome = p.Nome ,
-                    Codigo = p.Codigo,
-                    CPF = p.CPF,
-                    Sexo = p.Sexo,
-                    Status = p.Status,
-                    DataNascimento = p.DataNascimento,
-                    
-                });
+                string[] parametrosValores = new string[6];
+                parametrosValores[0] = oPessoa.Nome;
+                parametrosValores[1] = oPessoa.Codigo;
+                parametrosValores[2] = oPessoa.CPF;
+
+                int _sexo = Convert.ToInt32(oPessoa.Sexo);
+                int _status = Convert.ToInt32(oPessoa.Status);
+
+                parametrosValores[3] = Convert.ToString(_sexo);
+                parametrosValores[4] = Convert.ToString(_status);
+                parametrosValores[5] = Convert.ToString(oPessoa.DataNascimento.ToString("MM/dd/yyyy HH:mm:ss"));
+
+                sql = "INSERT INTO Pessoa(Nome,Codigo, Cpf, Sexo, Status, datanascimento) values (@Nome,@Codigo, @Cpf, @Sexo, @Status, @datanascimento)";
+                AcessoDB.CRUD(sql, parametrosNomes, parametrosValores);
+
+                AcessoDB.ExecuteNonQuery(sql);
             }
             catch (Exception ex)
             {
-                throw new Exception(string.Format("Não foi possível cadastrar."));
+                throw ex;
             }
-            finally
-            {
-                _dao.CloseConnection();
-            }
+            //try
+            //{
+            //    _dao.OpenConnection();
+
+            //    _dao.Execute(new P_RegistraPessoa()
+            //    {
+            //        Operacao = "INSERT",
+            //        Nome = p.Nome ,
+            //        Codigo = p.Codigo,
+            //        CPF = p.CPF,
+            //        Sexo = p.Sexo,
+            //        Status = p.Status,
+            //        DataNascimento = p.DataNascimento,
+
+            //    });
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new Exception(string.Format("Não foi possível cadastrar."));
+            //}
+            //finally
+            //{
+            //    _dao.CloseConnection();
+            //}
         }
         public void Alterar(Pessoa oPessoa)
         {

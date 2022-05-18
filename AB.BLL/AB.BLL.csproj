@@ -31,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Data.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\AB.DAL\Data\Data.Base.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\AB.DAL\Data\nunit.framework.dll</HintPath>
     </Reference>
@@ -56,6 +52,10 @@
     <ProjectReference Include="..\AB.DAL\AB.DAL.csproj">
       <Project>{dc195826-6267-4923-ac06-d715763cb981}</Project>
       <Name>AB.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AB.DAL\Data\Data.Base\Data.Base.csproj">
+      <Project>{b0da0332-42ef-44dd-b624-f19bdfac73da}</Project>
+      <Name>Data.Base</Name>
     </ProjectReference>
     <ProjectReference Include="..\AB.DTO\AB.DTO.csproj">
       <Project>{f7a0e6ab-f1a4-4fb8-8b92-e7adc93b8722}</Project>

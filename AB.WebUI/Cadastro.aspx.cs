@@ -94,6 +94,11 @@ namespace AB.WebUI
 
         protected void btnLocalizar_Click(object sender, EventArgs e)
         {
+            CarregaTela();
+        }
+
+        private void CarregaTela()
+        {
             if (!string.IsNullOrWhiteSpace(txtId.Text))
             {
                 int codigo = Convert.ToInt32(txtId.Text);
@@ -114,7 +119,7 @@ namespace AB.WebUI
                     txtDtNascimento.Text = _pessoa.DataNascimento.ToShortDateString();
 
                     lblIdade.Text = Convert.ToString(CalculaIdade(Convert.ToDateTime(txtDtNascimento.Text)) + " Anos");
-                    
+
                     HabilitaCampos(true);
 
                 }
@@ -125,7 +130,7 @@ namespace AB.WebUI
             }
             else
             {
-                lblmsg.Text = "Informe o Id da Pessoa...";
+                lblmsg.Text = "Informe o Os dados solicitados.";
             }
         }
 
@@ -149,10 +154,13 @@ namespace AB.WebUI
                     _pessoa.Status = (EnumStatusPessoa)_status;
                     _pessoa.Nome = txtNome.Text;
                     _pessoa.CPF = txtCpf.Text;
-                    //_pessoa.Sexo = dplSexo.SelectedValue;
                     _pessoa.DataNascimento = Convert.ToDateTime(txtDtNascimento.Text);
-
                     _pessoaBLL.Incluir(_pessoa);
+
+                    LimpaTelaDeCadastro();
+
+                    ListaPessoas();
+
                 }
                 catch (Exception ex)
                 {
